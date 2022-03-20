@@ -7,19 +7,6 @@ const app=express();
 app.use(express.json());
 app.use(cors())
 app.use(cookieparser());
-app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader(
-      "Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content-Type, Accept, Authorization"
-    );
-    res.setHeader(
-      "Access-Control-Allow-Methods",
-      "GET, POST, PATCH, PUT, DELETE, OPTIONS"
-    );
-    next();
-  });
-
 const adminRouter=require("./src/router/adminRouter")
 app.use("/api/admin",adminRouter)
 const studentRouter=require("./src/router/studentRouter")
@@ -38,6 +25,6 @@ app.get("/*",(req,res)=>{
 mongoose.connect("mongodb+srv://Jihana:Jihaan%40123@cluster0.xi6vh.mongodb.net/schoolManagamentSystem?retryWrites=true&w=majority",()=>{
     console.log("Database Connected")
 })
-app.listen( process.env.PORT||1234,()=>{
-    console.log("server is listening...http://localhost:1234");
+app.listen( process.env.PORT||1236,()=>{
+    console.log("server is listening...http://localhost:1236");
 })
