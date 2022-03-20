@@ -120,7 +120,7 @@ homeRouter.post("/reset-password",(req,res)=>{
                 subject:"Forgot Password",
                 text:"hai",
                 html:` <p>You requested for password reset</p>
-                <h5>click in this <a href="/api/newPassword/${token}">link</a> to reset password</h5>
+                <h5>click in this <a href="http://localhost:3000/newPassword/${token}">link</a> to reset password</h5>
                 `
             };
             transporter.sendMail(mailOptions,function(error,info){
