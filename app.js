@@ -2,11 +2,9 @@ const express=require("express")
 const mongoose=require("mongoose")
 const cors=require("cors")
 const path=require("path")
-const cookieparser=require("cookie-parser")
 const app=express();
 app.use(express.json());
 app.use(cors())
-app.use(cookieparser());
 const adminRouter=require("./src/router/adminRouter")
 app.use("/api/admin",adminRouter)
 const studentRouter=require("./src/router/studentRouter")
