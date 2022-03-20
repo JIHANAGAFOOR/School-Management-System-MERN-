@@ -119,9 +119,9 @@ homeRouter.post("/reset-password",(req,res)=>{
                 to:`${user.email}`,
                 subject:"Forgot Password",
                 text:"hai",
-                html:` <p>You requested for password reset</p>
-                <h5>click in this <a href="http://localhost:3000/newPassword/${token}">link</a> to reset password</h5>
-                `
+                // html:` <p>You requested for password reset</p>
+                // <h5>click in this <a href="http://localhost:3000/newPassword/${token}">link</a> to reset password</h5>
+                // `
             };
             transporter.sendMail(mailOptions,function(error,info){
                 if(error){
