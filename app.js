@@ -41,5 +41,5 @@ app.get('/*',(req,res)=>{
   res.sendFile(path.join(__dirname+'/build/index.html'))
 })
 app.listen(process.env.PORT ||1234,()=>{
-    console.log("server is listening...http://localhost:1234");
+    console.log("server is listening..http://localhost:1234");
 })
